@@ -6,7 +6,7 @@ Feel free to change these minimal requirements if you think something would be
 better in a different way, but keeping the features of adding, deleting, and
 listing ToDo items.
 
-Create a branch named after you (your first name) in this repository and commit all your work products there.
+Create a fork of this repo and commit all your work products there. Make a pull request when you are ready :)
 
 ## Coding tasks
 
