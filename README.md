@@ -1,23 +1,37 @@
-# ToDo Service
+# Todo App
 
-For this task you'll write a To-Do server and command-line client.
+A ToDo Node app build with Express, MongoDB and Angular.
+Node,Express provides the RESTful API.
+Angular provides the frontend and accesses the API.
+MongoDB stores todo collection.
 
-Feel free to change these minimal requirements if you think something would be
-better in a different way, but keeping the features of adding, deleting, and
-listing ToDo items.
+## Requirements
 
-Create a fork of this repo and commit all your work products there. Make a pull request when you are ready :)
+- [Node and npm](http://nodejs.org)
+- MongoDB: Make sure you have your own local or remote MongoDB database URI configured in `.env` file
 
-## Coding tasks
+## Installation
 
-The command line app should support the following flags:
+1. Clone the repository: `git clone git@github.com:gauravs08/TODO`
+2. Install the application: `npm install`
+3. To fix the project : `npm audit fix`
+4. Place your own MongoDB URI in `.env`
+5. Config Port in `.env`
+6. Start the server: `node server.js`
+7. View in browser at `http://localhost:8080` or from Port mention in .env
 
-- `todo -l`
-  - Would list my current ToDo items.
-- `todo -i {JSON ToDo here}`
-  - Would insert a new ToDo item with arbitrary JSON content. Server assigns the
-    ID.
-- `todo -d ID`
-  - Would delete the ToDo with a given ID.
+## Features with UI & with REST api
+1. Add new Todo `http://localhost:8080/api/todos/`  *add a body
+2. Get all Todo `http://localhost:8080/api/todos`   
+3. Delete a Todo`http://localhost:8080/api/todos/:todo_id`  pass id to delete
+4. Update a Todo to make it complete `http://localhost:8080/api/todos/:todo_id` pass id and body to update
 
-The server should expose a REST API to support the 3 basic CLI operations.
+## Json format
+`{
+        "text": "Task1",
+        "completed": true,
+        "_id": "5ced59816244ab47b0257cd4",
+        "__v": 0
+    }`
+
+![Todo-APP](http://g.recordit.co/V3knMN7hJu.gif)
